@@ -1,0 +1,11 @@
+target/
+apps/desktop/src-tauri/target/
+apps/desktop/ui/node_modules/
+apps/desktop/ui/dist/
+dist/
+.klink/
+*.AppImage
+*.deb
+*.msi
+*.exe
+.DS_Store

@@ -1,0 +1,12 @@
+[package]
+name = "klink-parse"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+klink-common = { path = "../klink-common" }
+aho-corasick.workspace = true
+hashbrown.workspace = true
+object.workspace = true
+serde.workspace = true

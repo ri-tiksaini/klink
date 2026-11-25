@@ -1,0 +1,15 @@
+[package]
+name = "klink-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+klink-common = { path = "../klink-common" }
+klink-parse = { path = "../klink-parse" }
+klink-graph = { path = "../klink-graph" }
+klink-index = { path = "../klink-index" }
+ignore.workspace = true
+rayon.workspace = true
+serde.workspace = true
+serde_json.workspace = true

@@ -1,0 +1,20 @@
+name: Klink CI (Linux & Windows)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-bench:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Run workspace unit & adversarial tests (release)
+        run: cargo test --workspace --release
+      - name: Enforce 20k-node latency contract benchmarks
+        run: cargo run --release -p klink-cli --bin klink-bench
